@@ -1,0 +1,54 @@
+.py-base {
+    /*padding-eixoY*/
+    padding-block: var(--py-base);
+}
+
+.py-lg {
+    /*padding-eixoY*/
+    padding-block: var(--py-lg);
+}
+
+.py-xl {
+    /*padding-eixoY*/
+    padding-block: var(--py-xl);
+}
+
+.px-lg {
+    /*padding-eixoX*/
+    padding-inline: var(--px-lg);
+}
+
+.container {
+    --max-width: 375px;
+    /*Logo a função min vai observar qual dos dois valores é o menor*/
+    /*               375       , 100  - 48, pois, (1.5 rem * 2) = 48  */           
+    width: min(var(--max-width), 100% - var(--px-lg) * 2);
+    margin-inline: auto;
+    border: solid violet;
+}
+
+.desktop-only {
+    display: none;
+}
+
+.even-columns {
+    display: grid;
+    gap: 1rem;
+
+}
+
+@media (width >= 80em) {
+    .container {
+        --max-width: 80rem;
+    }
+
+    .desktop-only {
+        display: initial;
+    }
+
+    .even-columns {
+        /*grid-auto-flow, Os itens devem ser colocados automaticamente em colunas, e não em linhas.*/
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;   
+    }
+}
