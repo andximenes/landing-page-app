@@ -25,7 +25,7 @@ Aplica em todos os elementos, inclusive no que é criado antes (::before) e depo
     --stroke-color: #27272A;
     --text-color-primary: #F4F4F5;
     --text-color-secondary: #A1A1AA;
-    --brand-color: #F7B733;
+    --brand-color-primary: #F7B733;
     --brand-color-secondary: #FC4A1A;
 
     /* fonts */
